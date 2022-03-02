@@ -1,6 +1,4 @@
 import string
-file = open("text","r")
-file_text = file.read()
 def rot13(file_text):
     L1 = string.ascii_uppercase[:13]
     L2 = string.ascii_uppercase[13:]
@@ -24,7 +22,6 @@ def rot13(file_text):
             elif ch.isnumeric() or ch.isspace() or ch in string.punctuation:
                 str1+=ch
                 break
-    file = open(f"""{input("enter new file name")}""","w")
+    file = open(f"""{input("enter new file name")}.txt""","w")
     file.write(str1)
     file.close()
-rot13(file_text)
